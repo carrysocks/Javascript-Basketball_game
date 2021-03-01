@@ -4,7 +4,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+	flex-direction:column;
 }
+
+.selectForm{
+	display:flex;
+}
+
+.Select{
+	display:flex;
+	flex-direction:column;
+	padding:30px;
+	border:1px solid black;
+	margin:100px;
+}
+
+.Select p{
+	margin-top:10px;
+	margin-bottom:30px;
+}
+
+#startBtn{
+	font-size:24px;
+	border:none;
+	
+}
+
 #basketball {
   border: 1px solid black;
+}
+
+.on{
+	display : block;
+}
+.hide{
+	display : none;
 }

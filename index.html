@@ -6,7 +6,25 @@
 		<link href="styles.css" rel="stylesheet">
   </head>
   <body>
-		<canvas id="basketball" width="1300px" height="700px"></canvas>
-    <script src="index.js"></script>
+		<div class="selectForm">
+		<div class="Select player1N">
+			<p>Player1 선택</p>
+			<input type="checkbox" name="player1Name" value="kevin"><p>Kevin Durant</p>
+			<input type="checkbox" name="player1Name" value="lebron"><p>Lebron James</p>
+			<input type="checkbox" name="player1Name" value="curry"><p>Stephen Curry</p>
+		</div>
+		<div class="Select player2N">
+			<p>Player2 선택</p>
+			<input type="checkbox" name="player2Name" value="kevin"><p>Kevin Durant</p>
+			<input type="checkbox" name="player2Name" value="lebron"><p>Lebron James</p>
+			<input type="checkbox" name="player2Name" value="curry"><p>Stephen Curry</p>
+		</div>
+		</div>
+		<button id="startBtn"> start Game</button>
+		<canvas id="basketball" class="hide" width="1300px" height="700px"></canvas>
+		<script type="module" src="start.js"></script>
+		<script type="module" src="player.js"></script>
+		<script type="module" src="ball.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
