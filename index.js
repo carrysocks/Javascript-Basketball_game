@@ -2,6 +2,10 @@ import {Player} from "./player.js";
 import {Ball} from "./ball.js";
 const startBtn = document.querySelector("#startBtn");
 const select = document.querySelector(".selectForm");
+const scoreBoard = document.querySelector("#scoreBoard");
+const player1Score = document.querySelector(".player1Score");
+const player2Score = document.querySelector(".player2Score");
+const controlPanel = document.querySelector("#controlPanel");
 const canvas = document.querySelector("#basketball");
 const ctx = canvas.getContext("2d");
 const width = canvas.width;
@@ -38,9 +42,11 @@ const init = (player1_select,player2_select) => {
 	 
 		if(gameStart){
 			init(player1_select,player2_select);
+			scoreBoard.className = "on";
 			startBtn.className = "hide";
 			select.className = "hide";
 			canvas.className = "on";
+			controlPanel.className = "on";
 			game();
 		}
   }
@@ -253,6 +259,7 @@ const checkGoal = () => {
 		else{
 			player2.score += 2;
 		}
+		player2Score.innerHTML = player2.score;
 		console.log("2 win");
 		playerTurn = 1;
 		restartGame();
@@ -265,6 +272,7 @@ const checkGoal = () => {
 		else{
 			player1.score += 2;
 		}
+		player1Score.innerHTML = player1.score;
 		console.log("1 win");
 		playerTurn = 2;
 		restartGame();
