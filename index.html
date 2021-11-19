@@ -21,7 +21,23 @@
 		</div>
 		</div>
 		<button id="startBtn"> start Game</button>
+		<div id="scoreBoard" class="flex_hide">
+			<div class="player1Score">0</div> : <div class="player2Score">0</div>
+		</div>
 		<canvas id="basketball" class="hide" width="1300px" height="700px"></canvas>
+
+		<div id="controlPanel" class="flex_hide">
+			<div id="player1Control">
+				<p>이동 : w a s d </p>
+				<p>슛 : r </p>
+				<p>점프 : t </p>
+			</div>
+			<div id="player2Control">
+				<p>이동 : arrow </p>
+				<p>슛 : 7 </p>
+				<p>점프 : 9 </p>
+			</div>
+		</div>
 		<script type="module" src="start.js"></script>
 		<script type="module" src="player.js"></script>
 		<script type="module" src="ball.js"></script>
